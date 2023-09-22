@@ -14,6 +14,25 @@ body {
     background-color: #fff;
 }
 
+.content_header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.text_box {
+    border-radius: 0.5rem;
+    margin: 1rem 0.5rem;
+    border: solid green;
+}
+
+.filter_button {
+    margin: 1rem;
+    border-radius: 0.5rem;
+    border: solid green;
+}
+
 @media screen and (min-width: 992px) {
     .content {
         max-width: 992px;
