@@ -6,6 +6,11 @@ const limit = 10
 let offset = 0;
 
 function convertPokemonToLi(pokemon) {
+    const statsList = pokemon.stats.map((statsName, index) => {
+        const statsNumber = pokemon.baseStats[index];
+        return `<li class="stats-item ${statsName}">${statsName}: ${statsNumber}</li>`;
+    }).join('');
+
     return `
         <li class="pokemon ${pokemon.type}">
             <span class="number">#${pokemon.number}</span>
@@ -16,11 +21,14 @@ function convertPokemonToLi(pokemon) {
                     ${pokemon.types.map((type) => `<li class="type ${type}">${type}</li>`).join('')}
                 </ol>
 
-                <img src="${pokemon.photo}"
-                     alt="${pokemon.name}">
+                <ol class="stats_name">
+                    ${statsList}
+                </ol>
+
+                <img src="${pokemon.photo}" alt="${pokemon.name}">
             </div>
         </li>
-    `
+    `;
 }
 
 function loadPokemonItens(offset, limit) {

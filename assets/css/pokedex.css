@@ -78,6 +78,38 @@
     background-color: #f9aec7;
 }
 
+
+.hp{
+    background-color: #FF0000;
+    filter: brightness(1.1);
+    color: white;
+}
+.attack{
+    background-color: #F08030;
+    filter: brightness(1.1);
+    color: white;
+}
+.defense{
+    background-color: #F8D030;
+    filter: brightness(1.1);
+    color: white;
+}
+.special-attack{
+    background-color: #6890F0;
+    filter: brightness(1.1);
+    color: white;
+}
+.special-defense{
+    background-color: #78C850;
+    filter: brightness(1.1);
+    color: white;
+}
+.speed{
+    background-color: #F85888;
+    filter: brightness(1.1);
+    color: white;
+}
+
 .pokemon {
     display: flex;
     flex-direction: column;
@@ -120,6 +152,26 @@
     border-radius: 1rem;
     filter: brightness(1.1);
     text-align: center;
+}
+
+.pokemon .detail .stats_name {
+    list-style: none;
+}
+
+.stats_name li {
+    display: inline-block;
+    margin: 0.15rem;
+    border-radius: 1rem;
+    font-size: 0.7rem;
+    border: solid gray;
+}
+
+.pokemon .detail .base_stats {
+    list-style: none;
+}
+
+.pokemon .detail .base_stats .stats_number {
+    padding: 0.2rem;
 }
 
 .pokemon .detail img {
